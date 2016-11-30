@@ -25,7 +25,7 @@ console.log('*********************************');
 
 //NOW ON ES6
 var supership = {
-    Name: 'ES6',
+    Name: 'ES5 OLD ONE',
     Reserves: 5,
     get fuel() {
         return this.Reserves;
@@ -33,6 +33,10 @@ var supership = {
     set fuel(value){
         this.Reserves = value;
         console.log('Your reserves are updated to ...');
+    },
+    set setName(name){
+        this.Name = name;
+        console.log('Hey the name of spaceship was changed... \\o/');
     }
 };
 
@@ -40,6 +44,7 @@ console.log(supership);
 console.log(supership.fuel);
 supership.fuel = 10;
 console.log(supership.fuel);
+supership.setName = 'ES6 ROCKS';
 console.log(supership);
 console.log('---------------------------------------------------------------------------------');
 
