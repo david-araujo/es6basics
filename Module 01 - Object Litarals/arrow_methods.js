@@ -21,7 +21,7 @@ console.log(spaceship.getFuel());
 spaceship.setFuel(10);
 console.log(spaceship.getFuel());
 console.log(spaceship);
-console.log('*********************************');
+console.log('******');
 
 //NOW ON ES6
 var supership = {
@@ -36,14 +36,17 @@ var supership = {
     },
     set setName(name){
         this.Name = name;
-        console.log('Hey the name of spaceship was changed... \\o/');
+        console.log('Hey the name of our super spaceship was changed... \\o/');
     }
 };
 
 console.log(supership);
+// If you need to get value you just need call the object.getMethod.
 console.log(supership.fuel);
+// If you need to set some value on attribute you can use object.setMethod = newValue. ES6 check if the method is a Set Method.
 supership.fuel = 10;
 console.log(supership.fuel);
+// Setting the Name Attribute using a pattern name to Set methodes.
 supership.setName = 'ES6 ROCKS';
 console.log(supership);
 console.log('---------------------------------------------------------------------------------');
@@ -55,3 +58,24 @@ console.log('-------------------------------------------------------------------
       // function body
     };
 */
+
+// An arrow function with exactly one parameter can omit the parenthesis.
+var double = value => {
+  return value * 2;
+};
+console.log('Double function omiting parameter parentesis and returnig the value: ' + double(4) + '\n******');
+
+// The return statement is implicit, and there’s no need for brackets denoting the function body anymore, as you can only use a single expression.
+var triple = value => value * 3;
+console.log('Triple function omiting parameter parentesis and brackets body returnig the value: ' + triple(4) + '\n******');
+
+// To return an object literal, you’ll need to wrap that object literal expression in parenthesis.
+var objectFactory = (name, age) => ({ Name: name, Age: age });
+var david = objectFactory('David Araujo', 25); console.log(david + '\n******');
+
+// Passing an arraow function as callback parameter to another function and returning an array of objetct
+var maped = [1,2,3].map(value => ({ 'number' : value, verified : true }));
+console.log(maped + '\n******');
+
+// An IFF on ES6 create and involing a function
+((greeting) => console.log(greeting))('Hello IIF on ES6');
