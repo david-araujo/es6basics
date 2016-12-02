@@ -11,6 +11,6 @@ Author: **_Nicolas Bevacqua_**
 
 ## Modules:
 
-1. **_Building Web Applications_**
+1. **_ES6 Essentials_**
     * **_objects.js_** - Understand Objects on ES6.
     * **_arrow\_methods.js_** - Create Getters and Setters and understand Arrow Functions.
