@@ -14,3 +14,4 @@ Author: **_Nicolas Bevacqua_**
 1. **_ES6 Essentials_**
     * **_objects.js_** - Understand Objects on ES6.
     * **_arrow\_methods.js_** - Create Getters and Setters and understand Arrow Functions.
+    * **_assignment\_destructuring_** - Assign variables using objects properties and Arrays.
