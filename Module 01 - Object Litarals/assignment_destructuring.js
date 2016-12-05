@@ -83,3 +83,29 @@ console.log('Before swap we have left = ' + left6 + ' and right = ' + right6);
 [left6, right6] = [right6, left6];
 console.log('After swap we have left = ' + left6 + ' and right = ' + right6 + ' ES6 the SIMPLE WAY ... \\o/');
 console.log('---------------------------------------------------------------------------------');
+
+/*
+    Destructuring Function Paremeters
+*/
+
+// It's possible define default parametrs to avoit return NULL objects.
+function destructuring ({param1 = 1, param2 = 2} = {}) {
+    return {a: param1, b: param2};
+};
+
+// Returning default object and destructuring on variables a and b.
+var {a, b} = destructuring ();
+console.log('Here comes a = ' + a + ' b = ' + b + '\n******');
+
+// Send a new object changing the first parameter.
+var {a, b} = destructuring ( { param1 : 'Changed the first value param' } );
+console.log('Here comes a = ' + a + ' b = ' + b + '\n******');
+
+// Creating an obeject and changing all parameters
+var o = {
+    param1 : '\\o/',
+    param2 : 'This is ES6!!!'
+};
+
+var {a, b} = destructuring ( o );
+console.log('Here comes a = ' + a + ' b = ' + b + '\n******');
